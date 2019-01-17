@@ -193,9 +193,7 @@
 // document.querySelector("#emperorList").appendChild(fragment)
 
 
-// ************************************************************FIRST SOLUTION ******************************************
-const article = document.createElement('article');
-article.id = "messages";
+// // ************************************************************FIRST SOLUTION ******************************************
 
 const fragment = document.createDocumentFragment();
 
@@ -213,8 +211,8 @@ addElements = () => {
         section.textContent = message;
         fragment.appendChild(section);
     });
-    article.appendChild(fragment);
-    console.log(article);
+    const container = document.querySelector("#container");
+    container.appendChild(fragment);
 }
 addElements();
 
